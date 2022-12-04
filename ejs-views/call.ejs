@@ -1,0 +1,96 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/call.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="/callback.css" rel="stylesheet">
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Надежда | <%= title %></title>
+</head>
+<body>
+    
+<div class='header' id="home">
+    <div class='container'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <a href="/"> <img src="images/logo.png" alt=""></a>
+            </div>
+
+            <div class='nav'>
+                <a class='nav-item' href="/">ГЛАВНАЯ</a>
+                <a class='nav-item' href="/.#specialists">ПЕРСОНАЛ</a>
+                <a class='nav-item' href="prices">УСЛУГИ И ЦЕНЫ</a>
+                <a class='nav-item' href="reception">ЗАПИСЬ</a>
+            </div>
+
+            <div class='phone'>
+                <div class='phone-holder'>
+                    <div class='phone-img'>
+                        <img src="images/phone2.png" alt="">
+                    </div>
+
+                    <div class='number'><a class='num' href='#'>+7(985)-343-01-14</a></div>
+                </div>
+
+                <div class='phone-text'>
+                    Свяжитесь с нами для <br> записи на прием
+                </div>
+            </div>
+
+            <div class='btn'>
+                <a class='button' href='call'>ПЕРЕЗВОНИТЕ</a>
+            </div>
+
+        </div>
+
+<div class="card">
+        <form action="" method="post" class="form1" name="callback_form" id="callback_form">
+            <div class="h3"> Оставьте номер и мы вам перезвоним!</div>
+                <div class="inputs">
+                    <input type="text" class="inputboxx" name="name" placeholder="Ваше имя" size="20" maxlength="40" required /> <br/>
+                    <input type="text" name="tel" id="tel" class="inputboxx" placeholder="+7(999)-999-9999" required> <br/>
+                </div>
+           <div class="button-call"><button class="name noselect">Отправить</button></div>
+           <div class="button-call"><input type="submit" value="Submit"></div>
+            
+        </form>
+            <div class="result" id="result_form"></div>
+    </div>
+
+
+</div>
+
+</div>
+
+
+        
+
+
+
+<div class='footer'>
+    Copyright 2022
+</div>
+
+<script charset="utf-8" type="text/javascript" src="https://cp.callback-free.com/api/js/form-builder.js" data-key="FKEA0dVx"></script>
+<script src='server.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/reception.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+
+
+    <link href="/callback.css" rel="stylesheet">
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Надежда | <%= title %></title>
+</head>
+<body>
+    
+    <div class='header' id="home">
+        <div class='container'>
+            <div class='header-line'>
+                <div class='header-logo'>
+                    <a href="/"> <img src="images/logo.png" alt=""></a>
+                </div>
+    
+                <div class='nav'>
+                    <a class='nav-item' href="/">ГЛАВНАЯ</a>
+                    <a class='nav-item' href="/.#specialists">ПЕРСОНАЛ</a>
+                    <a class='nav-item' href="prices">УСЛУГИ И ЦЕНЫ</a>
+                    <a class='nav-item' href="reception">ЗАПИСЬ</a>
+                </div>
+    
+                <div class='phone'>
+                    <div class='phone-holder'>
+                        <div class='phone-img'>
+                            <img src="images/phone2.png" alt="">
+                        </div>
+    
+                        <div class='number'><a class='num' href='#'>+7(985)-343-01-14</a></div>
+                    </div>
+    
+                    <div class='phone-text'>
+                        Свяжитесь с нами для <br> записи на прием
+                    </div>
+                </div>
+    
+                <div class='btn'>
+                    <a class='button' href='call'>ПЕРЕЗВОНИТЕ</a>
+                </div>
+    
+            </div>
+    
+    
+        </div>
+    
+ 
+
+        <div class="card">
+            <form action="" method="post" class="form1" name="callback_form" id="callback_form">
+                <div class="h3"> Введите свои данные для записи на прием</div>
+               <div class="vvedite-uslugu"><h3>Выберите услугу:</h3></div>
+                <div class="select-wrapper">
+                    <select name="select-category" id="" class="select">
+                        <% if (uslugi.length) { %>
+                            <% uslugi.forEach(({ usluga }) => { %>
+                        <option value=""><%= usluga %></option>
+                        <% }) %>
+          <% } %>
+                    </select>
+                </div>
+                    <div class="inputs">
+                        <div class="inform"><h3> Пациент:</h3></div>
+                        <input type="text" class="inputboxx" name="name" placeholder="ФИО" size="20" maxlength="40" required /> <br/>
+                        <input type="text" name="tel" id="tel" class="inputboxx" placeholder="+7(999)-999-9999" required> <br/>
+                        <input type="email" name="email" id="email" class="inputboxx" placeholder="E-mail" required> <br/><br/>
+                       <div class="passport"><h3> Паспорт РФ:</h3></div>
+                        <input type="number" name="seria" id="seria" class="inputboxx" placeholder="Серия" required> <br/>
+                        <input type="number" name="nomer" id="nomer" class="inputboxx" placeholder="Номер" required> <br/>
+                        <input type="text" name="kem" id="kem" class="inputboxx" placeholder="Кем выдан" required> <br/>
+                        <input type="date" name="kogda" id="kogda" class="inputboxx" placeholder="Дата выдачи" required> <br/>
+                        <input type="text" name="adres" id="adres" class="inputboxx" placeholder="Адрес регистрации" required> <br/>
+                    </div>
+               <div class="button-call"><button class="name noselect">Отправить</button></div>
+                
+            </form>
+                <div class="result" id="result_form"></div>
+        </div>
+    
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class='footer'>
+        Copyright 2022
+    </div>
+    
+    <script charset="utf-8" type="text/javascript" src="https://cp.callback-free.com/api/js/form-builder.js" data-key="FKEA0dVx"></script>
+    <script src='server.js'></script>
+    
+    </body>
+    </html>

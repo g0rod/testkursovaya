@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/prices.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+
+
+    <link href="/callback.css" rel="stylesheet">
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Надежда | <%= title %></title>
+</head>
+<body>
+    
+<div class='header' id="home">
+    <div class='container'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <a href="/"> <img src="images/logo.png" alt=""></a>
+            </div>
+
+            <div class='nav'>
+                <a class='nav-item' href="/">ГЛАВНАЯ</a>
+                <a class='nav-item' href="/.#specialists">ПЕРСОНАЛ</a>
+                <a class='nav-item' href="prices">УСЛУГИ И ЦЕНЫ</a>
+                <a class='nav-item' href="reception">ЗАПИСЬ</a>
+            </div>
+
+            <div class='phone'>
+                <div class='phone-holder'>
+                    <div class='phone-img'>
+                        <img src="images/phone2.png" alt="">
+                    </div>
+
+                    <div class='number'><a class='num' href='#'>+7(985)-343-01-14</a></div>
+                </div>
+
+                <div class='phone-text'>
+                    Свяжитесь с нами для <br> записи на прием
+                </div>
+            </div>
+
+            <div class='btn'>
+                <a class='button' href='call'>ПЕРЕЗВОНИТЕ</a>
+            </div>
+
+        </div>
+
+    </div>
+
+  
+  
+</div>
+
+<div class="uslugi-prices">
+    <ul>
+
+        <% if (uslugi.length) { %>
+          <% uslugi.forEach(({ usluga, price }) => { %>
+            <article>
+            <li>
+              
+                <h2><%= usluga %></h2>
+                <h3><%= price %></h3>
+            </li>
+        </article>
+          <% }) %>
+        <% } %>
+    </ul>
+    </div>
+
+
+
+
+
+<div class='footer'>
+    Copyright 2022
+</div>
+
+<script charset="utf-8" type="text/javascript" src="https://cp.callback-free.com/api/js/form-builder.js" data-key="FKEA0dVx"></script>
+<script src='server.js'></script>
+
+</body>
+</html>
